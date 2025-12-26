@@ -1,46 +1,65 @@
 <template>
-  <nav
-    id="navbar"
-    class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b-4 border-orange-500 transition-all duration-300"
+  <header
+    class="fixed top-0 left-0 right-0 z-50 transition-all duration-200"
+    :class="scrolled ? 'bg-surface-elevated/95 backdrop-blur-md border-b border-border' : 'bg-transparent'"
   >
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="#" class="text-3xl font-bold text-orange-600 flex items-center gap-2 select-none">
-        <span class="text-4xl">🍊</span> Tangerina
-      </a>
-      <div class="hidden md:flex space-x-8 items-center font-semibold text-gray-700">
-        <a href="#features" class="hover:text-orange-500 transition">O que eu faço</a>
-        <a href="#why-me" class="hover:text-orange-500 transition">Por que me querer?</a>
-        <a href="#reviews" class="hover:text-orange-500 transition">A galera Approved</a>
-      </div>
-      <a
-        href="https://discord.com/oauth2/authorize"
-        target="_blank"
-        class="bg-brand-orange hover:bg-orange-600 text-white px-6 py-2 rounded-full font-bold shadow-lg hover:shadow-orange-500/50 transition transform hover:scale-105 flex items-center gap-2"
-      >
-        <i data-feather="user-plus"></i>
-        Me adiciona!
-      </a>
+    <div class="container-default">
+      <nav class="flex items-center justify-between h-16 md:h-20">
+        <a href="#" class="flex items-center gap-2 group">
+          <span class="text-2xl">🍊</span>
+          <span class="text-xl font-bold text-text-primary">Tangerina</span>
+        </a>
+
+        <div class="hidden md:flex items-center gap-8">
+          <a 
+            href="#features" 
+            class="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors"
+          >
+            Funcionalidades
+          </a>
+          <a 
+            href="#how-it-works" 
+            class="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors"
+          >
+            Como funciona
+          </a>
+          <a 
+            href="#testimonials" 
+            class="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors"
+          >
+            Depoimentos
+          </a>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <a
+            href="https://discord.com/oauth2/authorize"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary !px-6 !py-2 !text-sm"
+          >
+            <Icon name="lucide:user-plus" class="w-4 h-4" />
+            <span>Adicionar</span>
+          </a>
+        </div>
+      </nav>
     </div>
-  </nav>
+  </header>
 </template>
 
 <script setup lang="ts">
+const scrolled = ref(false)
+
+const handleScroll = () => {
+  scrolled.value = window.scrollY > 20
+}
+
 onMounted(() => {
-  const handleScroll = () => {
-    const navbar = document.getElementById('navbar')
-    if (navbar) {
-      if (window.scrollY > 50) {
-        navbar.classList.add('shadow-md')
-        navbar.classList.replace('py-4', 'py-3')
-      } else {
-        navbar.classList.remove('shadow-md')
-        navbar.classList.replace('py-3', 'py-4')
-      }
-    }
-  }
-  window.addEventListener('scroll', handleScroll)
-  onUnmounted(() => {
-    window.removeEventListener('scroll', handleScroll)
-  })
+  window.addEventListener('scroll', handleScroll, { passive: true })
+  handleScroll()
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
 })
 </script>
