@@ -1,31 +1,40 @@
 <template>
-  <div class="bg-brand-light text-brand-dark antialiased">
-    <Navbar />
-    <Hero />
-    <About />
-    <Features />
-    <WhyMe />
-    <Reviews />
-    <CTA />
-    <Footer />
+  <div class="min-h-screen bg-surface">
+    <TangerinaNavbar />
+    <main>
+      <TangerinaHero />
+      <TangerinaTrustBar />
+      <TangerinaFeatures />
+      <TangerinaHowItWorks />
+      <TangerinaTestimonials />
+      <TangerinaCTA />
+    </main>
+    <TangerinaFooter />
   </div>
 </template>
 
 <script setup lang="ts">
-onMounted(() => {
-  const script = document.createElement('script')
-  script.src = 'https://unpkg.com/feather-icons'
-  script.onload = () => {
-    if ((window as any).feather) {
-      ;(window as any).feather.replace()
+useHead({
+  htmlAttrs: {
+    lang: 'pt-BR'
+  },
+  title: 'Tangerina — O Bot de Discord que seu servidor merece',
+  meta: [
+    {
+      name: 'description',
+      content: 'Tangerina é o bot de Discord completo para moderação, entretenimento e economia. Mais de 10.000 servidores confiam em nós.'
     }
-  }
-  document.head.appendChild(script)
-})
-
-onUpdated(() => {
-  if ((window as any).feather) {
-    ;(window as any).feather.replace()
-  }
+  ],
+  link: [
+    {
+      rel: 'preconnect',
+      href: 'https://fonts.googleapis.com'
+    },
+    {
+      rel: 'preconnect',
+      href: 'https://fonts.gstatic.com',
+      crossorigin: ''
+    }
+  ]
 })
 </script>
