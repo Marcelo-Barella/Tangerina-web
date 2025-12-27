@@ -1,46 +1,65 @@
 <template>
-  <section class="py-16 border-y border-border bg-neutral-50/30 relative">
+  <section class="py-16 relative overflow-hidden border-y border-border bg-surface-elevated/50">
     <div class="container-default">
-      <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
-        <div class="flex flex-col items-center lg:items-start text-center lg:text-left">
-          <p class="text-xs font-bold uppercase tracking-widest text-text-tertiary mb-4">Confiabilidade comprovada</p>
-          <div class="flex items-center gap-4">
-            <div class="flex -space-x-3">
-              <div class="w-12 h-12 rounded-full bg-[#5865f2] flex items-center justify-center text-white text-xs font-bold border-4 border-surface shadow-lg">G</div>
-              <div class="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center text-white text-xs font-bold border-4 border-surface shadow-lg">M</div>
-              <div class="w-12 h-12 rounded-full bg-red-500 flex items-center justify-center text-white text-xs font-bold border-4 border-surface shadow-lg">P</div>
-              <div class="w-12 h-12 rounded-full bg-tangerine-500 flex items-center justify-center text-white text-xs font-bold border-4 border-surface shadow-lg">+</div>
-            </div>
-            <div>
-              <p class="text-lg font-bold text-text-primary leading-tight">10.000+</p>
-              <p class="text-xs font-semibold text-text-secondary uppercase tracking-tighter">Servidores Ativos</p>
-            </div>
-          </div>
+      <div class="text-center mb-10">
+        <p class="text-sm text-text-tertiary font-medium tracking-wide uppercase">
+          Confiado por comunidades incríveis
+        </p>
+      </div>
+      
+      <!-- Logos Grid -->
+      <div class="flex flex-wrap items-center justify-center gap-8 md:gap-12">
+        <div 
+          v-for="(partner, index) in partners" 
+          :key="index"
+          class="trust-logo"
+        >
+          <span class="text-2xl mr-2">{{ partner.icon }}</span>
+          <span class="text-sm font-bold text-text-secondary">{{ partner.name }}</span>
         </div>
-        
-        <div class="flex flex-wrap items-center justify-center gap-12 md:gap-20">
-          <div class="flex flex-col items-center gap-2">
-            <div class="flex gap-0.5">
-              <Icon name="lucide:star" class="w-5 h-5 text-yellow-500 fill-yellow-500" />
-              <Icon name="lucide:star" class="w-5 h-5 text-yellow-500 fill-yellow-500" />
-              <Icon name="lucide:star" class="w-5 h-5 text-yellow-500 fill-yellow-500" />
-              <Icon name="lucide:star" class="w-5 h-5 text-yellow-500 fill-yellow-500" />
-              <Icon name="lucide:star" class="w-5 h-5 text-yellow-500 fill-yellow-500" />
-            </div>
-            <span class="text-xs font-bold text-text-secondary uppercase tracking-widest">Avaliação 4.9/5</span>
-          </div>
-          
-          <div class="flex flex-col items-center gap-2">
-            <Icon name="lucide:shield-check" class="w-6 h-6 text-green-600" />
-            <span class="text-xs font-bold text-text-secondary uppercase tracking-widest">99.9% Uptime</span>
-          </div>
-
-          <div class="flex flex-col items-center gap-2">
-            <Icon name="lucide:globe" class="w-6 h-6 text-tangerine-500" />
-            <span class="text-xs font-bold text-text-secondary uppercase tracking-widest">Global Support</span>
-          </div>
+      </div>
+      
+      <!-- Stats -->
+      <div class="mt-12 flex flex-wrap items-center justify-center gap-8 md:gap-16">
+        <div v-for="stat in stats" :key="stat.label" class="text-center">
+          <p class="text-2xl font-bold text-text-primary">{{ stat.value }}</p>
+          <p class="text-xs text-text-tertiary">{{ stat.label }}</p>
         </div>
       </div>
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+const partners = [
+  { name: 'Gaming Brasil', icon: '🎮' },
+  { name: 'Anime Society', icon: '🌸' },
+  { name: 'Dev Community', icon: '💻' },
+  { name: 'Music Hub', icon: '🎵' },
+  { name: 'Art Studio', icon: '🎨' },
+  { name: 'RP Universe', icon: '🌍' }
+]
+
+const stats = [
+  { value: '10k+', label: 'Servidores' },
+  { value: '500k+', label: 'Usuários' },
+  { value: '1M+', label: 'Comandos/dia' }
+]
+</script>
+
+<style scoped>
+.trust-logo {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1.25rem;
+  border-radius: 12px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  transition: all 300ms ease;
+}
+
+.trust-logo:hover {
+  border-color: rgba(249, 115, 22, 0.3);
+  transform: translateY(-2px);
+}
+</style>
