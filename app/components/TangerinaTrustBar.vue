@@ -43,7 +43,7 @@ const partners = [
 const stats = [
   { value: '10k+', label: 'Servidores' },
   { value: '500k+', label: 'Usuários' },
-  { value: '1M+', label: 'Comandos/dia' }
+  { value: '1M+', label: 'Interações/dia' }
 ]
 </script>
 

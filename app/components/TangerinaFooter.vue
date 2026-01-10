@@ -12,8 +12,8 @@
             <span class="text-2xl font-bold text-text-primary tracking-tight">Tangerina</span>
           </div>
           <p class="text-body text-sm leading-relaxed max-w-sm mb-8">
-            O assistente definitivo para o seu servidor Discord. 
-            Moderação inteligente, economia dinâmica e entretenimento em um único lugar.
+            Seu assistente musical e bot de entretenimento para Discord. 
+            Reproduza músicas, use comandos de voz e converse naturalmente.
           </p>
           
           <!-- Social Links -->
@@ -149,7 +149,6 @@ const socials = [
 
 const productLinks = [
   { text: 'Funcionalidades', href: '#features' },
-  { text: 'Comandos', href: '#' },
   { text: 'Dashboard', href: '#' },
   { text: 'API', href: '#' },
   { text: 'Status', href: '#' }

@@ -43,6 +43,15 @@ export default defineNuxtConfig({
     ],
     css: {
       devSourcemap: true
+    },
+    server: {
+      allowedHosts: ['bergamota.dev'],
+    },
+  },
+  
+  runtimeConfig: {
+    public: {
+      discordClientId: '1389316439193944275'
     }
   }
 })

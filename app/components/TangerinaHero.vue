@@ -22,20 +22,20 @@
 
         <!-- Main Headline -->
         <h1 class="text-display text-balance mb-5 animate-fade-in-up delay-100">
-          O assistente definitivo para o seu
-          <span class="text-gradient-shine"> servidor Discord</span>
+          Seu assistente musical e
+          <span class="text-gradient-shine"> bot de entretenimento</span>
         </h1>
 
         <!-- Subtitle -->
         <p class="text-body-lg max-w-2xl mx-auto mb-9 animate-fade-in delay-200">
-          Moderação inteligente, economia dinâmica e entretenimento em um único lugar. 
-          Leve seu servidor ao próximo nível com o Tangerina.
+          Reproduza músicas do Spotify e YouTube, use comandos de voz e converse naturalmente. 
+          Tangerina está aqui para levantar o astral do seu servidor.
         </p>
 
         <!-- CTA Buttons -->
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10 animate-fade-in delay-300">
           <a
-            href="https://discord.com/oauth2/authorize"
+            :href="inviteUrl"
             target="_blank"
             rel="noopener noreferrer"
             class="btn btn-primary w-full sm:w-auto group"
@@ -102,11 +102,9 @@
                       <span class="text-[10px] text-neutral-500">Hoje às 14:32</span>
                     </div>
                     <div class="bg-[#2b2d31] rounded-lg p-3.5 border-l-4 border-tangerine-500">
-                      <p class="text-white font-semibold mb-1">👋 Olá, sou o Tangerina!</p>
+                      <p class="text-white font-semibold mb-1">Tangerina</p>
                       <p class="text-neutral-300 text-sm">
-                        Meu objetivo é facilitar a gestão do seu servidor. Use 
-                        <code class="text-tangerine-400 bg-tangerine-500/10 px-1.5 py-0.5 rounded">/help</code> 
-                        para conhecer todos os meus comandos.
+                        Meu objetivo é levantar o astral do seu servidor. Converse comigo no chat de texto ou de voz e eu entenderei o que você precisa!
                       </p>
                     </div>
                   </div>
@@ -123,7 +121,7 @@
                       <span class="text-[10px] text-neutral-500">Hoje às 14:33</span>
                     </div>
                     <p class="text-neutral-300 text-sm">
-                      <code class="bg-[#404249] px-2 py-1 rounded">/daily</code>
+                      Tangerina, toca uma música do Metallica pra nós
                     </p>
                   </div>
                 </div>
@@ -140,11 +138,8 @@
                       <span class="text-[10px] text-neutral-500">Hoje às 14:33</span>
                     </div>
                     <div class="bg-[#2b2d31] rounded-lg p-3.5 border-l-4 border-green-500">
-                      <p class="text-white font-semibold mb-1">💰 Recompensa Diária</p>
                       <p class="text-neutral-300 text-sm">
-                        Parabéns! Você coletou 
-                        <span class="text-green-400 font-bold">500 🍊 moedas</span>. 
-                        Volte amanhã para mais!
+                        Tocando agora: Enter Sandman - Metallica
                       </p>
                     </div>
                   </div>
@@ -160,6 +155,10 @@
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+const { inviteUrl } = useDiscordInvite()
+</script>
 
 <style scoped>
 .bg-gradient-radial {

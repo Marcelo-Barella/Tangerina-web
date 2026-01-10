@@ -47,12 +47,6 @@
             <li>
               <a href="#" class="text-sm text-text-secondary hover:text-tangerine-600 transition-colors flex items-center gap-2 group">
                 <span class="w-1 h-1 bg-border rounded-full group-hover:bg-tangerine-500 transition-colors"></span>
-                Comandos
-              </a>
-            </li>
-            <li>
-              <a href="#" class="text-sm text-text-secondary hover:text-tangerine-600 transition-colors flex items-center gap-2 group">
-                <span class="w-1 h-1 bg-border rounded-full group-hover:bg-tangerine-500 transition-colors"></span>
                 Dashboard
               </a>
             </li>

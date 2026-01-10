@@ -34,7 +34,7 @@
         <!-- CTA Button -->
         <div class="flex items-center gap-3 relative z-10">
           <a
-            href="https://discord.com/oauth2/authorize"
+            :href="inviteUrl"
             target="_blank"
             rel="noopener noreferrer"
             class="btn btn-primary btn-shine !px-5 !py-2.5 !text-xs !font-bold uppercase tracking-wider"
@@ -87,6 +87,7 @@
 </template>
 
 <script setup lang="ts">
+const { inviteUrl } = useDiscordInvite()
 const scrolled = ref(false)
 const mobileMenuOpen = ref(false)
 

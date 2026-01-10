@@ -106,7 +106,7 @@
             
             <h3 class="text-title mb-3">Pronto para usar!</h3>
             <p class="text-body text-sm leading-relaxed mb-6">
-              Use <code class="text-tangerine-400 font-mono bg-tangerine-500/10 px-2 py-0.5 rounded">/help</code> para ver todos os comandos e começar.
+              Comece a conversar com o Tangerina usando linguagem natural. Não precisa decorar comandos!
             </p>
             
             <!-- Visual Demo -->
@@ -132,7 +132,7 @@
       <!-- CTA -->
       <div class="mt-20 text-center animate-fade-in">
         <a
-          href="https://discord.com/oauth2/authorize"
+          :href="inviteUrl"
           target="_blank"
           rel="noopener noreferrer"
           class="btn btn-primary px-10 py-4 text-base group"
@@ -148,6 +148,10 @@
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+const { inviteUrl } = useDiscordInvite()
+</script>
 
 <style scoped>
 .step-card {

@@ -15,7 +15,7 @@
           <span class="text-gradient"> Tangerina</span>
         </h2>
         <p class="text-body-lg">
-          Milhares de comunidades confiam no Tangerina para gerenciar seus servidores.
+          Milhares de comunidades confiam no Tangerina para animar seus servidores com música e diversão.
         </p>
       </div>
 
@@ -73,42 +73,42 @@
 <script setup lang="ts">
 const testimonials = [
   {
-    quote: 'O Tangerina revolucionou a moderação do meu servidor. A auto-moderação é incrível e economiza horas do nosso trabalho diário!',
+    quote: 'O Tangerina revolucionou as festas no meu servidor! A integração com Spotify e YouTube é perfeita, e os comandos de voz funcionam que é uma beleza.',
     name: 'Lucas Silva',
     role: 'Owner, Gaming Community',
     avatar: 'LS',
     color: 'linear-gradient(135deg, #667eea, #764ba2)'
   },
   {
-    quote: 'O sistema de economia é perfeito! Meus membros adoram as recompensas diárias e os mini-games. Aumentou muito o engajamento.',
+    quote: 'Os comandos de voz são incríveis! É só falar "Tangerina, toca tal música" e ele já começa. A resposta em TTS é muito natural e divertida!',
     name: 'Marina Costa',
     role: 'Admin, Anime Brasil',
     avatar: 'MC',
     color: 'linear-gradient(135deg, #f093fb, #f5576c)'
   },
   {
-    quote: 'Testei vários bots, mas nenhum se compara ao Tangerina. A interface é intuitiva e o suporte é excepcional!',
+    quote: 'Testei vários bots de música, mas nenhum se compara ao Tangerina. A qualidade do áudio e a facilidade de uso são excepcionais!',
     name: 'Pedro Santos',
     role: 'Mod, Tech Hub',
     avatar: 'PS',
     color: 'linear-gradient(135deg, #4facfe, #00f2fe)'
   },
   {
-    quote: 'O sistema de níveis motivou muito minha comunidade. Agora todos querem subir no ranking e ganhar os cargos exclusivos.',
+    quote: 'O assistente inteligente é perfeito para buscar informações durante as calls. Ele entende perfeitamente o que preciso e responde rápido!',
     name: 'Ana Rodrigues',
     role: 'Owner, Study Group',
     avatar: 'AR',
     color: 'linear-gradient(135deg, #43e97b, #38f9d7)'
   },
   {
-    quote: 'Finalmente um bot brasileiro que entende nossas necessidades. Comandos em português e suporte local fazem toda diferença.',
+    quote: 'Finalmente um bot brasileiro que entende linguagem natural! Falo com ele normalmente e ele compreende tudo. Os comandos de voz são sensacionais!',
     name: 'Thiago Mendes',
     role: 'Admin, RP Brasil',
     avatar: 'TM',
     color: 'linear-gradient(135deg, #fa709a, #fee140)'
   },
   {
-    quote: 'A configuração é super fácil e o dashboard web é lindo. Em 5 minutos já tinha tudo funcionando perfeitamente!',
+    quote: 'A configuração é super fácil e a qualidade das músicas é incrível. Em 5 minutos já estava tocando minhas playlists do Spotify!',
     name: 'Juliana Ferreira',
     role: 'Owner, Art Community',
     avatar: 'JF',

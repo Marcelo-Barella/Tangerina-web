@@ -33,7 +33,7 @@
 
         <div class="flex items-center gap-3">
           <a
-            href="https://discord.com/oauth2/authorize"
+            :href="inviteUrl"
             target="_blank"
             rel="noopener noreferrer"
             class="btn btn-primary !px-6 !py-2 !text-sm"
@@ -48,6 +48,7 @@
 </template>
 
 <script setup lang="ts">
+const { inviteUrl } = useDiscordInvite()
 const scrolled = ref(false)
 
 const handleScroll = () => {

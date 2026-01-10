@@ -23,14 +23,14 @@
       
       <!-- Description -->
       <p class="text-body-lg max-w-xl mx-auto mb-10 animate-fade-in">
-        Junte-se a milhares de administradores que escolheram a excelência. 
-        Comece a usar o Tangerina hoje mesmo.
+        Junte-se a milhares de comunidades que escolheram o Tangerina para animar seus servidores. 
+        Comece a tocar suas músicas favoritas hoje mesmo.
       </p>
 
       <!-- CTA Buttons -->
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in">
         <a
-          href="https://discord.com/oauth2/authorize"
+          :href="inviteUrl"
           target="_blank"
           rel="noopener noreferrer"
           class="btn btn-primary w-full sm:w-auto px-10 py-4 text-base group"
@@ -92,3 +92,7 @@
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+const { inviteUrl } = useDiscordInvite()
+</script>
